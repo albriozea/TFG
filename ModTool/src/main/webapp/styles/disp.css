@@ -1,0 +1,19 @@
+
+body {
+	
+ 	background-color: #dce6ef;
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	color: white;
+
+}
+
+form {
+  background-color: #fefefe;
+  margin: 5% auto 5% auto; 
+  border: 3px solid #888;
+  width: 25%; 
+  padding: 26px;
+  color: black;
+}

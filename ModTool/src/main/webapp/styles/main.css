@@ -1,0 +1,17 @@
+body {
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover;
+	color: white;
+     
+}
+
+form {
+  background-color: #fefefe;
+  margin: 10% auto 17% auto; 
+  border: 3px solid #888;
+  width: 25%; 
+  padding: 26px;
+  margin-right: 100px;
+  color: black;
+}

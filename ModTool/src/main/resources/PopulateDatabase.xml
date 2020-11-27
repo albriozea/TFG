@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+	
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="user1" />
+		<property name="password" value="24c9e15e52afc47c225b757e7bee1f9d" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="userAccount3" class="security.UserAccount">
+		<property name="username" value="user2" />
+		<property name="password" value="7e58d63b60197ceb55a1c487989a3720" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="name" value="Sara" />
+		<property name="surnames" value="Guillena" />
+		<property name="email" value="sguille@mail.com" />
+		<property name="userAccount" ref="userAccount1" />
+
+	</bean>
+	
+	<bean id="user1" class="domain.User">
+		<property name="name" value="Miguel" />
+		<property name="surnames" value="García" />
+		<property name="email" value="miga@example.net" />
+		<property name="userAccount" ref="userAccount2" />
+	</bean>
+	
+	<bean id="user2" class="domain.User">
+		<property name="name" value="Gema" />
+		<property name="surnames" value="Martín" />
+		<property name="email" value="gema@example.net" />
+		<property name="userAccount" ref="userAccount3" />
+	</bean>
+
+</beans>
